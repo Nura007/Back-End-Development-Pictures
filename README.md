@@ -49,6 +49,14 @@ ibmcloud ce project current
 ibmcloud ce app create --name pictures --image YOUR_REGISTRY/YOUR_NAMESPACE/pictures:1.0 --port 3000
 ```
 
-Replace the registry placeholders with your actual image. Cloud deployment has
-not yet been performed; no deployment output is supplied as if it had succeeded.
+Replace the registry placeholders with your actual image.
+
+## Verified lab deployment
+
+Deployed to IBM Cloud Code Engine on 2026-10-30 using
+`us.icr.io/sn-labs-u241413/pictures:1`, port 3000 and registry secret `icr-secret`.
+[Health endpoint](https://pictures.2gjiksib94u5.us-south.codeengine.appdomain.cloud/health) returned `{"status":"OK"}`.
+The lab instance uses minimum scale 1 to avoid a cold start on the first photo request.
+The service is also used by the deployed Django Photos page.
+Lab URLs are temporary and depend on the Skills Network environment remaining active.
 
